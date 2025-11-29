@@ -2,7 +2,7 @@ FROM maven:3.8.5-eclipse-temurin-17 AS build
 
 WORKDIR /app
 
-COPY pom.xml .
+COPY Backend/pom.xml .
 RUN mvn -q -e -B dependency:go-offline
 
 COPY . .
